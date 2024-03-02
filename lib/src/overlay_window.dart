@@ -36,6 +36,7 @@ class FlutterOverlayWindow {
     String overlayTitle = "overlay activated",
     String? overlayContent,
     bool enableDrag = false,
+    String notificationIcon = 'launcher',
     PositionGravity positionGravity = PositionGravity.none,
   }) async {
     await _channel.invokeMethod(
@@ -47,6 +48,7 @@ class FlutterOverlayWindow {
         "flag": flag.name,
         "overlayTitle": overlayTitle,
         "overlayContent": overlayContent,
+        "notificationIcon": notificationIcon,
         "enableDrag": enableDrag,
         "notificationVisibility": visibility.name,
         "positionGravity": positionGravity.name,
